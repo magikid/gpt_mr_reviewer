@@ -9,6 +9,7 @@ packages = [{include = "gpt_mr_reviewer"}]
 [tool.poetry.dependencies]
 python = "^3.9"
 openai = "^0.26.4"
+python-dotenv = "^0.21.1"
 
 
 [build-system]

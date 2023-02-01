@@ -1,6 +1,9 @@
 import openai
 import requests
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Read OpenAI API key from environment variable
 openai.api_key = os.environ.get("OPENAI_API_KEY")
