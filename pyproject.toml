@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "gpt-mr-reviewer"
+version = "0.1.0"
+description = ""
+authors = ["Chris W Jones <chris@christopherjones.us>"]
+readme = "README.md"
+packages = [{include = "gpt_mr_reviewer"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+openai = "^0.26.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
