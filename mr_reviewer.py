@@ -27,6 +27,7 @@ mr_data = mr_response.json()
 
 # Iterate through each merge request
 for mr in mr_data:
+    print(f"Analyzing merge request {mr['iid']} - {mr['title']}\n")
     # Get the merge request's code changes
     mr_changes_url = f"{merge_requests_base}/{mr['iid']}/changes"
     mr_changes_response = requests.get(mr_changes_url, headers=headers)
@@ -46,5 +47,6 @@ for mr in mr_data:
     comment_data = {
         "body": analysis
     }
-    requests.post(comment_url, headers=headers, data=comment_data)
+    print(f"{analysis}\n\n")
+    # requests.post(comment_url, headers=headers, data=comment_data)
 
